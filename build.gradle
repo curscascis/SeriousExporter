@@ -1,0 +1,29 @@
+plugins {
+    id 'org.spongepowered.plugin' version '0.6'
+
+}
+
+group 'SeriousExporter'
+version '1.0'
+description 'Seriously getting stats'
+
+
+repositories {
+    mavenCentral()
+    maven {
+        name = 'sponge'
+        url = 'http://repo.spongepowered.org/maven'
+    }
+    flatDir {
+        dirs 'lib'
+    }
+}
+
+dependencies {
+    compile 'org.spongepowered:spongeapi:5.0.0'
+    compile fileTree(dir: 'lib', include: '*.jar')
+
+}
+
+
+
